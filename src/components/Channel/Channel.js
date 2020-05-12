@@ -6,7 +6,7 @@ import Immutable from 'seamless-immutable';
 import Visibility from 'visibilityjs';
 import debounce from 'lodash/debounce';
 import throttle from 'lodash/throttle';
-import { logChatPromiseExecution } from 'stream-chat';
+import { logChatPromiseExecution } from 'fc-stream-chat';
 
 import {
   withChatContext,

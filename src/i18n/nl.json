@@ -37,7 +37,7 @@
   "{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} en {{ secondUser }}",
   "{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} en {{ secondUser }} zijn aan het typen ...",
   "{{ imageCount }} more": "+{{ imageCount }}",
-  "{{ memberCount }} members": "{{ memberCount }} deelnemers",
+  "{{ memberCount }} members": "",
   "{{ replyCount }} replies": "{{ replyCount }} antwoorden",
   "{{ user }} has been muted": "{{ user }} is gedempt",
   "{{ user }} is typing...": "{{ user }} is aan het typen...",

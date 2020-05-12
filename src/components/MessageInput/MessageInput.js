@@ -3,7 +3,7 @@ import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Immutable from 'seamless-immutable';
 import uniq from 'lodash/uniq';
-import { logChatPromiseExecution } from 'stream-chat';
+import { logChatPromiseExecution } from 'fc-stream-chat';
 import {
   dataTransferItemsHaveFiles,
   dataTransferItemsToFiles,

@@ -1,7 +1,7 @@
 /* eslint no-underscore-dangle: 0 */
 /* eslint no-param-reassign: 0 */
 
-import { StreamChat } from 'stream-chat';
+import { StreamChat } from 'fc-stream-chat';
 
 const apiKey = 'API_KEY';
 

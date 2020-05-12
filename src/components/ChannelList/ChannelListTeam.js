@@ -89,11 +89,7 @@ class ChannelListTeam extends PureComponent {
                   {this.props.client.user.status}
                 </div>
               </div>
-              <div className="str-chat__channel-list-team__header--right">
-                <button className="str-chat__channel-list-team__header--button">
-                  <img src={chevrondown} />
-                </button>
-              </div>
+              <div className="str-chat__channel-list-team__header--right"></div>
             </div>
             {this.props.children}
           </div>

@@ -37,7 +37,7 @@
   "{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} et {{ secondUser }}",
   "{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} et {{ secondUser }} sont en train d'écrire...",
   "{{ imageCount }} more": "{{ imageCount }} supplémentaires",
-  "{{ memberCount }} members": "{{ memberCount }} membres",
+  "{{ memberCount }} members": "",
   "{{ replyCount }} replies": "{{ replyCount }} réponses",
   "{{ user }} has been muted": "{{ user }} a été mis en sourdine",
   "{{ user }} is typing...": "{{ user }} est en train d'écrire...",

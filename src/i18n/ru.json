@@ -37,7 +37,7 @@
   "{{ firstUser }} and {{ secondUser }}": "{{ firstUser }} и {{ secondUser }}",
   "{{ firstUser }} and {{ secondUser }} are typing...": "{{ firstUser }} и {{ secondUser }} пишут...",
   "{{ imageCount }} more": "Ещё {{ imageCount }}",
-  "{{ memberCount }} members": "{{ memberCount }} члены",
+  "{{ memberCount }} members": "",
   "{{ replyCount }} replies": "{{ replyCount }} ответов",
   "{{ user }} has been muted": "{{ user }} has been muted",
   "{{ user }} is typing...": "{{ user }} пишет...",

@@ -140,3 +140,12 @@
     }
   }
 }
+
+@media screen and (max-width: 480px) {
+  .str-chat__channel-list-team {
+    &__main {
+      min-width: 100vw;
+      background: #f1f1f3;
+    }
+  }
+}
