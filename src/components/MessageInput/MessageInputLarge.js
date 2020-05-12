@@ -260,9 +260,7 @@ class MessageInputLarge extends PureComponent {
                     : ''
                 }`}
               >
-                {t('{{ watcherCount }} online', {
-                  watcherCount: this.props.watcher_count,
-                })}
+                {''}
               </span>
               <span className="str-chat__input-footer--typing">
                 {this.constructTypingString(this.props.typing)}

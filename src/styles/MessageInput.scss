@@ -5,7 +5,7 @@
   padding: 10px;
   position: relative;
   font-family: $second-font;
-  padding-bottom: 0;
+  // padding-bottom: 0;
   // display: flex;
 
   &-large {
@@ -59,10 +59,12 @@
   }
 
   &-footer {
+    position: absolute;
+    top: -25px;
     display: flex;
     justify-content: space-between;
     font-size: 12px;
-    background: $white;
+    //background: $white;
     padding: 0 10px 10px 10px;
     color: lighten($black, 50%);
 

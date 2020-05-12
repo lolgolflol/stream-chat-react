@@ -165,6 +165,7 @@
         &__header-livestream {
           padding-left: 20px;
           padding-right: 20px;
+          border-radius: 0px;
         }
       }
     }
@@ -288,6 +289,27 @@
     }
   }
   @media screen and (max-width: 960px) {
+    display: flex;
+  }
+  @media screen and (max-width: 640px) {
+    display: none;
+  }
+}
+.str-chat__header-hamburger-arrow {
+  width: 30px;
+  height: 40px;
+  padding: 10px 10px 10px 0px;
+  margin-right: 10px;
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+  &:hover {
+    .str-chat__header-hamburger--line {
+      background: $secondary-color;
+    }
+  }
+  @media screen and (max-width: 640px) {
     display: flex;
   }
 }
