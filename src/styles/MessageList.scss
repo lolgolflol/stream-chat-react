@@ -76,7 +76,7 @@
   &.str-chat {
     .str-chat {
       &__list {
-        padding: 55px 40px 0;
+        padding: 55px 40px 12px;
         background: white;
 
         &-notifications {
@@ -87,7 +87,7 @@
     @media screen and (max-width: 960px) {
       .str-chat {
         &__list {
-          padding: 55px 10px 0;
+          padding: 55px 10px 12px;
           &-notifications {
             padding: 0 10px;
           }

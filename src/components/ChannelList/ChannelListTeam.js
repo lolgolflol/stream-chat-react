@@ -72,7 +72,7 @@ class ChannelListTeam extends PureComponent {
             <div className="str-chat__channel-list-team__header">
               <div className="str-chat__channel-list-team__header--left">
                 <Avatar
-                  source={this.props.client.user.image}
+                  image={this.props.client.user.image}
                   name={
                     this.props.client.user.name || this.props.client.user.id
                   }

@@ -1,3 +1,4 @@
+import thTranslations from './th.json';
 import enTranslations from './en.json';
 import nlTranslations from './nl.json';
 import ruTranslations from './ru.json';
@@ -7,6 +8,7 @@ import hiTranslations from './hi.json';
 import itTranslations from './it.json';
 
 export {
+  thTranslations,
   enTranslations,
   nlTranslations,
   ruTranslations,

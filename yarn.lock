@@ -4758,10 +4758,10 @@ fbjs@^0.8.16:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
-fc-stream-chat@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/fc-stream-chat/-/fc-stream-chat-1.0.0.tgz#a13b01897c51a01a7aff918de2c0a9c6d0561b8d"
-  integrity sha512-uhipjIEfJwiOXS5zXbOR6+J/TgHUewlSBMzlXshNsRP+BvItNrYLU5mAblVFapULcLH2J9ZKIQ1y2nOnlE5e2Q==
+fc-stream-chat@1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/fc-stream-chat/-/fc-stream-chat-1.0.2.tgz#ebf27388ba0ba30202e0c06ffc345adf43ab188a"
+  integrity sha512-HRtXMw9PVtdrQtgPk3PLHqhgrD9YzbZu/fvUCA4nNoe29kbiIfbt3lnghb6Gvfy4M2BLVd6cpOQ/NTSsIpBtEg==
   dependencies:
     "@babel/runtime" "^7.3.1"
     "@types/seamless-immutable" "7.1.10"

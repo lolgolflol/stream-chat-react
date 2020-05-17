@@ -8,6 +8,7 @@ import localeData from 'dayjs/plugin/localeData';
 import relativeTime from 'dayjs/plugin/relativeTime';
 
 import {
+  thTranslations,
   enTranslations,
   nlTranslations,
   ruTranslations,
@@ -18,8 +19,9 @@ import {
 } from './i18n';
 
 const defaultNS = 'translation';
-const defaultLng = 'en';
+const defaultLng = 'th';
 
+import 'dayjs/locale/th';
 import 'dayjs/locale/nl';
 import 'dayjs/locale/ru';
 import 'dayjs/locale/tr';
@@ -278,7 +280,7 @@ const en_locale = {
  *
  */
 const defaultStreami18nOptions = {
-  language: 'en',
+  language: 'th',
   disableDateTimeTranslations: false,
   debug: false,
   logger: (msg) => console.warn(msg),
@@ -294,6 +296,7 @@ export class Streami18n {
   t = null;
   tDateTimeParser = null;
   translations = {
+    th: { [defaultNS]: thTranslations },
     en: { [defaultNS]: enTranslations },
     nl: { [defaultNS]: nlTranslations },
     ru: { [defaultNS]: ruTranslations },
