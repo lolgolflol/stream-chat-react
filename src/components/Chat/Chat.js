@@ -100,6 +100,10 @@ class Chat extends PureComponent {
     if (e !== undefined && e.preventDefault) {
       e.preventDefault();
     }
+    if (!!this.props.client && !!this.props.client.historyTool) {
+      const { historyTool } = this.props.client;
+      historyTool.push(`/${channel.id}`);
+    }
     if (Object.keys(watchers).length) {
       await channel.query({ watch: true, watchers });
     }
