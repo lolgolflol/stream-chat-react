@@ -282,10 +282,14 @@ class MessageInputLarge extends PureComponent {
               </span>
             </div>
           </div>
-          <div className={clsx('str-chat__message-count', messageOverFlow)}>
-            {this.props.messageLimit - this.props.text.length} /{' '}
-            {this.props.messageLimit}
-          </div>
+          {messageLimit ? (
+            <div className={clsx('str-chat__message-count', messageOverFlow)}>
+              {this.props.messageLimit - this.props.text.length} /{' '}
+              {this.props.messageLimit}
+            </div>
+          ) : (
+            <div />
+          )}
         </ImageDropzone>
       </div>
     );

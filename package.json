@@ -24,6 +24,7 @@
     "@testing-library/react": "^10.0.3",
     "@webscopeio/react-textarea-autocomplete": "^4.6.3",
     "anchorme": "^1.1.2",
+    "clsx": "^1.1.1",
     "dayjs": "^1.8.25",
     "deep-equal": "^2.0.2",
     "emoji-mart": "3.0.0",
@@ -127,11 +128,6 @@
   },
   "resolutions": {
     "stream-browserify/**/readable-stream": "2.3.6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "dotgit/hooks/pre-commit-format.sh && dotgit/hooks/pre-commit-reject-binaries.py"
-    }
   },
   "scripts": {
     "test": "jest",
