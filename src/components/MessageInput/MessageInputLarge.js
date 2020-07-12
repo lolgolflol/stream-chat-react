@@ -282,14 +282,7 @@ class MessageInputLarge extends PureComponent {
               </span>
             </div>
           </div>
-          <div
-            style={{
-              background: 'white',
-              textAlign: 'right',
-              color: '#9e9e9e',
-            }}
-            className={clsx('str-chat__message-count', messageOverFlow)}
-          >
+          <div className={clsx('str-chat__message-count', messageOverFlow)}>
             {this.props.messageLimit - this.props.text.length} /{' '}
             {this.props.messageLimit}
           </div>
