@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import clsx from 'clsx';
 import { Picker } from 'emoji-mart';
 import {
   ImageDropzone,
@@ -182,9 +183,10 @@ class MessageInputLarge extends PureComponent {
     const { t, text, messageLimit } = this.props;
     let { disabled } = this.props;
     const SendButton = this.props.SendButton;
+    let messageOverFlow = '';
     if (messageLimit) {
       if (messageLimit - text.length < 0) {
-        disabled = true;
+        messageOverFlow = 'str-chat__input-overflow';
       }
     }
     return (
@@ -202,7 +204,12 @@ class MessageInputLarge extends PureComponent {
           <div className="str-chat__input">
             {this.renderUploads()}
             {this.renderEmojiPicker()}
-            <div className="str-chat__input--textarea-wrapper">
+            <div
+              className={clsx(
+                'str-chat__input--textarea-wrapper',
+                messageOverFlow,
+              )}
+            >
               <ChatAutoComplete
                 users={this.props.getUsers()}
                 commands={this.props.getCommands()}
@@ -281,7 +288,7 @@ class MessageInputLarge extends PureComponent {
               textAlign: 'right',
               color: '#9e9e9e',
             }}
-            className="str-chat__message-count"
+            className={clsx('str-chat__message-count', messageOverFlow)}
           >
             {this.props.messageLimit - this.props.text.length} /{' '}
             {this.props.messageLimit}
