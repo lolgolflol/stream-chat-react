@@ -91,6 +91,7 @@ class MessageInputLarge extends PureComponent {
      * Any additional attrubutes that you may want to add for underlying HTML textarea element.
      */
     additionalTextareaProps: PropTypes.object,
+    messageLimit: PropTypes.number,
   };
 
   renderUploads = () => (
@@ -224,7 +225,7 @@ class MessageInputLarge extends PureComponent {
                   />
                 </svg>
               </span>
-
+              {/*
               <FileUploadButton
                 multiple={this.props.multipleUploads}
                 disabled={
@@ -248,6 +249,7 @@ class MessageInputLarge extends PureComponent {
                   </svg>
                 </span>
               </FileUploadButton>
+              */}
             </div>
             {SendButton && <SendButton sendMessage={this.props.handleSubmit} />}
           </div>
@@ -268,6 +270,7 @@ class MessageInputLarge extends PureComponent {
             </div>
           </div>
         </ImageDropzone>
+        <div>{this.props.messageLimit}</div>
       </div>
     );
   }
