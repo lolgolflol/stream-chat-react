@@ -179,8 +179,13 @@ class MessageInputLarge extends PureComponent {
   };
 
   render() {
-    const { t } = this.props;
+    const { t, disabled, text, messageLimit } = this.props;
     const SendButton = this.props.SendButton;
+    if (messageLimit) {
+      if (messageLimit - text.length < 0) {
+        disabled = true;
+      }
+    }
     return (
       <div className="str-chat__input-large">
         <ImageDropzone
@@ -210,7 +215,7 @@ class MessageInputLarge extends PureComponent {
                 placeholder={t('Type your message')}
                 onPaste={this.props.onPaste}
                 grow={this.props.grow}
-                disabled={this.props.disabled}
+                disabled={disabled}
                 additionalTextareaProps={this.props.additionalTextareaProps}
               />
 
@@ -269,7 +274,17 @@ class MessageInputLarge extends PureComponent {
               </span>
             </div>
           </div>
-          <div>{this.props.messageLimit - this.props.text.length}</div>
+          <div
+            style={{
+              background: 'white',
+              textAlign: 'right',
+              color: '#9e9e9e',
+            }}
+            className="str-chat__message-count"
+          >
+            {this.props.messageLimit - this.props.text.length} /{' '}
+            {this.props.messageLimit}
+          </div>
         </ImageDropzone>
       </div>
     );
