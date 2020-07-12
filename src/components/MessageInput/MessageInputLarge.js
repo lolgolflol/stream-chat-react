@@ -269,8 +269,8 @@ class MessageInputLarge extends PureComponent {
               </span>
             </div>
           </div>
+          <div>{this.props.messageLimit - this.props.text.length}</div>
         </ImageDropzone>
-        <div>{this.props.messageLimit}</div>
       </div>
     );
   }
