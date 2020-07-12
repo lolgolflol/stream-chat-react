@@ -179,7 +179,8 @@ class MessageInputLarge extends PureComponent {
   };
 
   render() {
-    const { t, disabled, text, messageLimit } = this.props;
+    const { t, text, messageLimit } = this.props;
+    let { disabled } = this.props;
     const SendButton = this.props.SendButton;
     if (messageLimit) {
       if (messageLimit - text.length < 0) {
