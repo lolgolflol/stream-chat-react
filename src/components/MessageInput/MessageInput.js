@@ -638,7 +638,6 @@ class MessageInput extends PureComponent {
       onSelectItem: this._onSelectItem,
       openEmojiPicker: this.openEmojiPicker,
     };
-    debugger;
     return <Input {...this.props} {...this.state} {...handlers} />;
   }
 }
