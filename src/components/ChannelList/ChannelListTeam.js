@@ -54,8 +54,6 @@ class ChannelListTeam extends PureComponent {
 
   render() {
     const { showSidebar, LoadingErrorIndicator, LoadingIndicator } = this.props;
-    debugger;
-    //const when = tDateTimeParser(message.created_at).calendar();
     if (this.props.error) {
       return <LoadingErrorIndicator type="Connection Error" />;
     } else if (this.props.loading) {
@@ -88,9 +86,6 @@ class ChannelListTeam extends PureComponent {
                 <div
                   className={`str-chat__channel-list-team__header--status ${this.props.client.user.status}`}
                 >
-                  <div style={{ textAlign: 'right' }}>
-                    <span>xxxx</span>
-                  </div>
                   {this.props.client.user.status}
                 </div>
               </div>
