@@ -53,7 +53,12 @@ class ChannelListTeam extends PureComponent {
   };
 
   render() {
-    const { showSidebar, LoadingErrorIndicator, LoadingIndicator } = this.props;
+    const {
+      showSidebar,
+      LoadingErrorIndicator,
+      LoadingIndicator,
+      t,
+    } = this.props;
     if (this.props.error) {
       return <LoadingErrorIndicator type="Connection Error" />;
     } else if (this.props.loading) {
@@ -80,8 +85,21 @@ class ChannelListTeam extends PureComponent {
                 />
               </div>
               <div className="str-chat__channel-list-team__header--middle">
-                <div className="str-chat__channel-list-team__header--title">
-                  {this.props.client.user.name || this.props.client.user.id}
+                <div>
+                  <div className="str-chat__channel-list-team__header--title">
+                    {this.props.client.user.name || this.props.client.user.id}
+                  </div>
+                  <div className="str-chat__channel-list-team__header--title str-chat__big-letter">
+                    {t('Idols phone ID')}
+                    <span>0</span>
+                    <span>8</span>
+                    <span>1</span>
+                    <span className="str-chat__span-dash">-</span>
+                    <span>1</span>
+                    <span>1</span>
+                    <span>1</span>
+                    <span>1</span>
+                  </div>
                 </div>
                 <div
                   className={`str-chat__channel-list-team__header--status ${this.props.client.user.status}`}
