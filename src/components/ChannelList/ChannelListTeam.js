@@ -85,15 +85,17 @@ class ChannelListTeam extends PureComponent {
                     {this.props.client.user.name || this.props.client.user.id}
                   </div>
                   <div className="str-chat__channel-list-team__header--title str-chat__big-letter">
-                    Idols phone ID
-                    <span>0</span>
-                    <span>8</span>
-                    <span>1</span>
-                    <span className="str-chat__span-dash">-</span>
-                    <span>1</span>
-                    <span>1</span>
-                    <span>1</span>
-                    <span>1</span>
+                    Idols phone ID.
+                    <div>
+                      <span>0</span>
+                      <span>8</span>
+                      <span>1</span>
+                      <span className="str-chat__span-dash">-</span>
+                      <span>1</span>
+                      <span>1</span>
+                      <span>1</span>
+                      <span>1</span>
+                    </div>
                   </div>
                 </div>
                 <div
