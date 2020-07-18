@@ -85,6 +85,7 @@ class ChannelPreviewMessenger extends PureComponent {
           <div className="str-chat__channel-arrow-right">
             <ArrowForwardIosSharpIcon />
           </div>
+          <div className="str-chat__lastMessage-timestamp">10.00</div>
         </div>
       </button>
     );
