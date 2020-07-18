@@ -8,6 +8,7 @@ import { LoadingChannels } from '../Loading';
 import { withChatContext } from '../../context';
 
 import chevrondown from '../../assets/str-chat__icon-chevron-down.svg';
+import flagThai from '../../assets/thailand.png';
 
 /**
  * ChannelList - A preview list of channels, allowing you to select the channel you want to open
@@ -84,8 +85,9 @@ class ChannelListTeam extends PureComponent {
                   <div className="str-chat__channel-list-team__header--title">
                     {this.props.client.user.name || this.props.client.user.id}
                   </div>
-                  <div className="str-chat__channel-list-team__header--title str-chat__big-letter">
+                  <div className="str-chat__channel-list-team__header--title str-chat__channel-list-team__header--title-2 str-chat__big-letter">
                     Idols phone ID.
+                    <img src={flagThai} />
                     <div>
                       <span>0</span>
                       <span>8</span>
