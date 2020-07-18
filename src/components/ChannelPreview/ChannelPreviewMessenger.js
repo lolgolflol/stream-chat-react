@@ -5,7 +5,7 @@ import truncate from 'lodash/truncate';
 
 import { Avatar } from '../Avatar';
 import { withTranslationContext } from '../../context';
-
+import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 /**
  * Used as preview component for channel item in [ChannelList](#channellist) component.
  * Its best suited for messenger type chat.
@@ -81,6 +81,9 @@ class ChannelPreviewMessenger extends PureComponent {
               : truncate(this.props.latestMessage, {
                   length: this.props.latestMessageLength,
                 })}
+          </div>
+          <div className="str-chat__channel-arrow-right">
+            <ArrowForwardIosIcon />
           </div>
         </div>
       </button>
