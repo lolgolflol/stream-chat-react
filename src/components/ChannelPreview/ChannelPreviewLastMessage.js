@@ -53,7 +53,16 @@ class ChannelPreviewLastMessage extends PureComponent {
   };
 
   render() {
-    const { t, displayTitle, displayImage } = this.props;
+    const {
+      t,
+      displayTitle,
+      displayImage,
+      tDateTimeParser,
+      channel,
+    } = this.props;
+    const lastMessage =
+      channel.state.messages[channel.state.messages.length - 1];
+    const when = tDateTimeParser(lastMessage.created_at).calendar();
 
     const unreadClass =
       this.props.unread >= 1 ? 'str-chat__channel-preview--unread' : '';
@@ -88,7 +97,7 @@ class ChannelPreviewLastMessage extends PureComponent {
           <div className="str-chat__channel-arrow-right">
             <ArrowForwardIosSharpIcon />
           </div>
-          <div className="str-chat__lastMessage-timestamp">10.00</div>
+          <div className="str-chat__lastMessage-timestamp">{when}</div>
         </button>
       </div>
     );
