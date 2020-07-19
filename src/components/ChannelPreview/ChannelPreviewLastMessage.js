@@ -62,7 +62,10 @@ class ChannelPreviewLastMessage extends PureComponent {
     } = this.props;
     const lastMessage =
       channel.state.messages[channel.state.messages.length - 1];
-    const when = tDateTimeParser(lastMessage.created_at).calendar();
+    let when = '';
+    if (lastMessage) {
+      when = tDateTimeParser(lastMessage.created_at).calendar();
+    }
 
     const unreadClass =
       this.props.unread >= 1 ? 'str-chat__channel-preview--unread' : '';
