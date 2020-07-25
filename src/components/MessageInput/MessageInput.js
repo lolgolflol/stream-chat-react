@@ -253,12 +253,16 @@ class MessageInput extends PureComponent {
   };
 
   handleChange = (event) => {
+    const { messageLimit } = this.props;
     event.preventDefault();
     if (!event || !event.target) {
       return '';
     }
-
     const text = event.target.value;
+    if (messageLimit - text.length < 0) {
+      return '';
+    }
+
     this.setState({ text });
     if (text) {
       logChatPromiseExecution(
