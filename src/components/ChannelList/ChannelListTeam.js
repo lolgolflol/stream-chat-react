@@ -62,7 +62,7 @@ class ChannelListTeam extends PureComponent {
     }
     let imageFlag = flagThai;
     if (this.props.client.user.nationalFlag) {
-      imageFlag = nationalFlag;
+      imageFlag = this.props.client.user.nationalFlag;
     }
 
     if (this.props.error) {
