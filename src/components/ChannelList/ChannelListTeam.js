@@ -60,6 +60,11 @@ class ChannelListTeam extends PureComponent {
     if (this.props.client.user.superPhoneNumber) {
       superPhoneNumber = this.props.client.user.superPhoneNumber.split('');
     }
+    let imageFlag = flagThai;
+    if (this.props.client.user.nationalFlag) {
+      imageFlag = nationalFlag;
+    }
+
     if (this.props.error) {
       return <LoadingErrorIndicator type="Connection Error" />;
     } else if (this.props.loading) {
@@ -92,7 +97,7 @@ class ChannelListTeam extends PureComponent {
                   </div>
                   <div className="str-chat__channel-list-team__header--title str-chat__channel-list-team__header--title-2 str-chat__big-letter">
                     Idols phone ID.
-                    <img src={flagThai} />
+                    <img src={imageFlag} />
                     <div>
                       <span>{_.get(superPhoneNumber, '[3]', 0)}</span>
                       <span>{_.get(superPhoneNumber, '[4]', 0)}</span>
