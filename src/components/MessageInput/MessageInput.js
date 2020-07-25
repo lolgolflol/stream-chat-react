@@ -260,15 +260,14 @@ class MessageInput extends PureComponent {
     }
     const text = event.target.value;
     if (messageLimit - text.length < 0) {
-      return '';
-    } else {
-      this.setState({ text });
-      if (text) {
-        logChatPromiseExecution(
-          this.props.channel.keystroke(),
-          'start typing event',
-        );
-      }
+      text = text.slice(0, messageLimit);
+    }
+    this.setState({ text });
+    if (text) {
+      logChatPromiseExecution(
+        this.props.channel.keystroke(),
+        'start typing event',
+      );
     }
   };
 
