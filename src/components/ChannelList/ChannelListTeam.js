@@ -56,7 +56,10 @@ class ChannelListTeam extends PureComponent {
 
   render() {
     const { showSidebar, LoadingErrorIndicator, LoadingIndicator } = this.props;
-    const superPhoneNumber = this.props.client.user.superPhoneNumber.split('');
+    let superPhoneNumber;
+    if (this.props.client.user.superPhoneNumber) {
+      superPhoneNumber = this.props.client.user.superPhoneNumber.split('');
+    }
     if (this.props.error) {
       return <LoadingErrorIndicator type="Connection Error" />;
     } else if (this.props.loading) {
