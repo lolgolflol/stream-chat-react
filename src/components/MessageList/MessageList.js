@@ -796,6 +796,7 @@ class MessageList extends PureComponent {
           }`}
           ref={this.messageList}
         >
+          <div>xxxxxxxxxx</div>
           {!elements.length ? (
             <EmptyStateIndicator listType="message" />
           ) : (
