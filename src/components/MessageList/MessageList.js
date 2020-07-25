@@ -655,6 +655,21 @@ class MessageList extends PureComponent {
     }
   };
 
+  chooseMessage = () => {
+    const {
+      t,
+      channel: {
+        data: { created_by },
+      },
+      client,
+    } = this.props;
+    if (client.userID === created_by.id) {
+      return t('Welcome to the chatroom');
+    } else {
+      return `${created_by.name} ${t('Open chat with you')}`;
+    }
+  };
+
   // eslint-disable-next-line
   render() {
     let allMessages = [...this.props.messages];
@@ -788,6 +803,8 @@ class MessageList extends PureComponent {
         );
       }
     }
+    const { channel, tDateTimeParser } = this.props;
+    const when = tDateTimeParser(channel.data.created_at).calendar();
     return (
       <React.Fragment>
         <div
@@ -796,7 +813,10 @@ class MessageList extends PureComponent {
           }`}
           ref={this.messageList}
         >
-          <div>xxxxxxxxxx</div>
+          <div className="str-chat__start-conversation">
+            <p>{when}</p>
+            <p>{this.chooseMessage()}</p>
+          </div>
           {!elements.length ? (
             <EmptyStateIndicator listType="message" />
           ) : (
