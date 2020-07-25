@@ -52,6 +52,21 @@ class ChannelPreviewLastMessage extends PureComponent {
     this.channelPreviewButton.current.blur();
   };
 
+  chooseMessage = () => {
+    const {
+      t,
+      channel: {
+        data: { created_by },
+      },
+      client,
+    } = this.props;
+    if (client.userID === created_by.id) {
+      return t('Welcome to the chatroom');
+    } else {
+      return `${created_by.name} ${t('Open chat with you')}`;
+    }
+  };
+
   render() {
     const {
       t,
@@ -88,7 +103,7 @@ class ChannelPreviewLastMessage extends PureComponent {
             </span>
             <span className="str-chat__channel-preview-last-message">
               {!this.props.channel.state.messages[0]
-                ? t('Nothing yet...')
+                ? this.chooseMessage()
                 : this.props.latestMessage}
             </span>
             {this.props.unread >= 1 && (
