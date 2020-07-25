@@ -6,6 +6,7 @@ import { Avatar } from '../Avatar';
 import { ChatDown } from '../ChatDown';
 import { LoadingChannels } from '../Loading';
 import { withChatContext } from '../../context';
+import _ from 'lodash';
 
 import chevrondown from '../../assets/str-chat__icon-chevron-down.svg';
 import flagThai from '../../assets/thailand.png';
@@ -55,6 +56,7 @@ class ChannelListTeam extends PureComponent {
 
   render() {
     const { showSidebar, LoadingErrorIndicator, LoadingIndicator } = this.props;
+    const superPhoneNumber = this.props.client.user.superPhoneNumber.split('');
     if (this.props.error) {
       return <LoadingErrorIndicator type="Connection Error" />;
     } else if (this.props.loading) {
@@ -89,14 +91,14 @@ class ChannelListTeam extends PureComponent {
                     Idols phone ID.
                     <img src={flagThai} />
                     <div>
-                      <span>0</span>
-                      <span>8</span>
-                      <span>1</span>
+                      <span>{_.get(superPhoneNumber, '[0]', 0)}</span>
+                      <span>{_.get(superPhoneNumber, '[1]', 0)}</span>
+                      <span>{_.get(superPhoneNumber, '[2]', 0)}</span>
                       <span className="str-chat__span-dash">-</span>
-                      <span>1</span>
-                      <span>1</span>
-                      <span>1</span>
-                      <span>1</span>
+                      <span>{_.get(superPhoneNumber, '[3]', 0)}</span>
+                      <span>{_.get(superPhoneNumber, '[4]', 0)}</span>
+                      <span>{_.get(superPhoneNumber, '[5]', 0)}</span>
+                      <span>{_.get(superPhoneNumber, '[6]', 0)}</span>
                     </div>
                   </div>
                 </div>
