@@ -96,7 +96,7 @@ class ChannelListTeam extends PureComponent {
                     {this.props.client.user.name || this.props.client.user.id}
                   </div>
                   <div className="str-chat__channel-list-team__header--title str-chat__channel-list-team__header--title-2 str-chat__big-letter">
-                    Idols phone ID.
+                    {this.props.client.user.userWord}
                     <img src={imageFlag} />
                     <div>
                       <span>{_.get(superPhoneNumber, '[3]', 0)}</span>
