@@ -36,14 +36,14 @@ import 'dayjs/locale/en';
 Dayjs.extend(updateLocale);
 
 Dayjs.updateLocale('th', {
-  calendar: {
-    sameDay: '[วันนี้] LT',
-    nextDay: '[พรุ่งนี้] LT',
-    nextWeek: 'dddd [ที่] LT',
-    lastDay: '[เมื่อวานนี้] LT',
-    lastWeek: '[ล่าสุด] dddd [สัปดาห์] LT',
-    sameElse: 'L',
-  },
+  //calendar: {
+  //sameDay: '[วันนี้เวลา] LT',
+  //nextDay: '[พรุ่งนี้] LT',
+  //nextWeek: 'dddd [ที่] LT',
+  //lastDay: '[เมื่อวานนี้] LT',
+  //lastWeek: '[ล่าสุด] dddd [สัปดาห์] LT',
+  //sameElse: 'L',
+  //},
 });
 
 Dayjs.updateLocale('nl', {
