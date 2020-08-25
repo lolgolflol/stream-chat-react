@@ -43,7 +43,9 @@ class MessageActions extends PureComponent {
   render() {
     return (
       <div ref={this.actionsRef} className="str-chat__message-actions">
-        <div
+        {/*
+
+<div
           className="str-chat__message-actions-reactions"
           onClick={this.props.onClickReact}
         >
@@ -59,6 +61,8 @@ class MessageActions extends PureComponent {
             />
           </svg>
         </div>
+         */}
+
         <div
           className="str-chat__message-actions-options"
           onClick={() => this._openActionBox()}
