@@ -362,6 +362,8 @@ class MessageSimple extends PureComponent {
             </div>
           )}
           {channelConfig && channelConfig.reactions && (
+            <div />
+            /*
             <div
               className="str-chat__message-simple__actions__action str-chat__message-simple__actions__action--reactions"
               onClick={this._clickReactionList}
@@ -378,6 +380,7 @@ class MessageSimple extends PureComponent {
                 />
               </svg>
             </div>
+            */
           )}
         </div>
       );
