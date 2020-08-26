@@ -271,7 +271,7 @@ class ChannelList extends PureComponent {
         )[0];
         if (customActiveChannel) {
           this.props.setActiveChannel(customActiveChannel, this.props.watchers);
-          this.moveChannelUp(customActiveChannel.cid);
+          //this.moveChannelUp(customActiveChannel.cid);
         }
       } else if (
         setActiveChannelOnMount &&
