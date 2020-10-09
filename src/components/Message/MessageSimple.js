@@ -387,7 +387,7 @@ class MessageSimple extends PureComponent {
     } else {
       return (
         <div className="str-chat__message-simple__actions">
-          {channelConfig && channelConfig.reactions && (
+          {/*channelConfig && channelConfig.reactions && (
             <div
               className="str-chat__message-simple__actions__action str-chat__message-simple__actions__action--reactions"
               onClick={this._clickReactionList}
@@ -399,7 +399,7 @@ class MessageSimple extends PureComponent {
                 />
               </svg>
             </div>
-          )}
+            )*/}
           {!threadList && channelConfig && channelConfig.replies && (
             <div
               onClick={handleOpenThread}
