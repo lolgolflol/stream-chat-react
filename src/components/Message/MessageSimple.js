@@ -622,13 +622,11 @@ class MessageSimple extends PureComponent {
             <div
               className={`str-chat__message-data str-chat__message-simple-data`}
             >
-              {/*
               !this.isMine() ? (
-                <span className="str-chat__message-simple-name">
-                  {message.user.name || message.user.id}
-                </span>
+              <span className="str-chat__message-simple-name">
+                {message.user.name || message.user.id}
+              </span>
               ) : null
-              */}
               <span className="str-chat__message-simple-timestamp">{when}</span>
             </div>
           </div>
