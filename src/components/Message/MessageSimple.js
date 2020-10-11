@@ -227,7 +227,7 @@ class MessageSimple extends PureComponent {
     } = this.props;
 
     if (readBy.length !== 0) {
-      return 'Read';
+      return t('Read');
     }
     return '';
   };
@@ -257,6 +257,7 @@ class MessageSimple extends PureComponent {
       const lastReadUser = readBy.filter(
         (item) => item && item.id !== client.user.id,
       )[0];
+      /*
       return (
         <span className="str-chat__message-simple-status">
           <Tooltip>
@@ -274,6 +275,8 @@ class MessageSimple extends PureComponent {
           )}
         </span>
       );
+      */
+      return <span />;
     } else if (
       message.status === 'received' &&
       message.id === lastReceivedId &&
@@ -407,7 +410,8 @@ class MessageSimple extends PureComponent {
           )}
           <div style={{ marginRight: '10px', fontSize: '12px', color: 'gray' }}>
             <span style={{ marginRight: '5px' }}>{this.renderRead()}</span>
-            {groupStyles.includes('bottom') ? (
+            {groupStyles.includes('bottom') ||
+            groupStyles.includes('single') ? (
               <span>{whenTime}</span>
             ) : (
               <span></span>
@@ -417,9 +421,13 @@ class MessageSimple extends PureComponent {
       );
     } else {
       return (
-        <div className="str-chat__message-simple__actions">
+        <div
+          className="str-chat__message-simple__actions"
+          style={{ alignItems: 'flex-end' }}
+        >
           <div style={{ marginLeft: '10px', fontSize: '12px', color: 'gray' }}>
-            {groupStyles.includes('bottom') ? (
+            {groupStyles.includes('bottom') ||
+            groupStyles.includes('single') ? (
               <span>{whenTime}</span>
             ) : (
               <span></span>
