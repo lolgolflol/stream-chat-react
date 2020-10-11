@@ -232,9 +232,9 @@ class MessageSimple extends PureComponent {
       const lastReadUser = readBy.filter(
         (item) => item && item.id !== client.user.id,
       )[0];
-      return <span className="str-chat__message-simple-status-read">Read</span>;
+      return 'Read';
     }
-    return <div />;
+    return '';
   };
 
   renderStatus = () => {
@@ -406,8 +406,11 @@ class MessageSimple extends PureComponent {
             </div>
             */
           )}
-          <div>
-            <span>{this.renderRead()}</span>
+          <div
+            style={{ marginRight: '10px' }}
+            className="str-chat__message-simple-timestamp"
+          >
+            <span style={{ marginRight: '5px' }}>{this.renderRead()}</span>
             <span>{whenTime}</span>
           </div>
         </div>
@@ -654,8 +657,9 @@ class MessageSimple extends PureComponent {
                 <span className="str-chat__message-simple-name">
                   {message.user.name || message.user.id}
                 </span>
-                ) : null */}
+                ) : null 
               <span className="str-chat__message-simple-timestamp">{when}</span>
+                */}
             </div>
           </div>
         </div>
