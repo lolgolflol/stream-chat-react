@@ -216,6 +216,24 @@ class MessageSimple extends PureComponent {
     return this.props.isMyMessage(this.props.message);
   }
 
+  renderRead = () => {
+    const {
+      readBy,
+      client,
+      message,
+      threadList,
+      lastReceivedId,
+      t,
+    } = this.props;
+    if (readBy.length !== 0 && !justReadByMe) {
+      const lastReadUser = readBy.filter(
+        (item) => item && item.id !== client.user.id,
+      )[0];
+      return <span className="str-chat__message-simple-status-read">Read</span>;
+    }
+    return <div />;
+  };
+
   renderStatus = () => {
     const {
       readBy,
@@ -348,7 +366,7 @@ class MessageSimple extends PureComponent {
       return (
         <div className="str-chat__message-simple__actions">
           {this.renderMessageActions()}
-          {!threadList && channelConfig && channelConfig.replies && (
+          {/* !threadList && channelConfig && channelConfig.replies && (
             <div
               onClick={handleOpenThread}
               className="str-chat__message-simple__actions__action str-chat__message-simple__actions__action--thread"
@@ -360,7 +378,7 @@ class MessageSimple extends PureComponent {
                 />
               </svg>
             </div>
-          )}
+            )*/}
           {channelConfig && channelConfig.reactions && (
             <div />
             /*
@@ -382,6 +400,7 @@ class MessageSimple extends PureComponent {
             </div>
             */
           )}
+          <div>{whenTime}</div>
         </div>
       );
     } else {
@@ -445,6 +464,7 @@ class MessageSimple extends PureComponent {
     } = this.props;
 
     const when = tDateTimeParser(message.created_at).calendar();
+    const whenTime = tDateTimeParser(message.created_at).format('LT');
 
     const messageClasses = this.isMine()
       ? 'str-chat__message str-chat__message--me str-chat__message-simple str-chat__message-simple--me'
