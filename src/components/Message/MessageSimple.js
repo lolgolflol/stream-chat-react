@@ -226,12 +226,7 @@ class MessageSimple extends PureComponent {
       t,
     } = this.props;
 
-    const justReadByMe =
-      readBy.length === 1 && readBy[0] && readBy[0].id === client.user.id;
-    if (readBy.length !== 0 && !justReadByMe) {
-      const lastReadUser = readBy.filter(
-        (item) => item && item.id !== client.user.id,
-      )[0];
+    if (readBy.length !== 0) {
       return 'Read';
     }
     return '';
@@ -423,6 +418,14 @@ class MessageSimple extends PureComponent {
     } else {
       return (
         <div className="str-chat__message-simple__actions">
+          <div style={{ marginLeft: '10px', fontSize: '12px', color: 'gray' }}>
+            {groupStyles.includes('bottom') ? (
+              <span>{whenTime}</span>
+            ) : (
+              <span></span>
+            )}
+          </div>
+
           {/*channelConfig && channelConfig.reactions && (
             <div
               className="str-chat__message-simple__actions__action str-chat__message-simple__actions__action--reactions"
