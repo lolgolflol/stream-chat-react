@@ -403,7 +403,10 @@ class MessageSimple extends PureComponent {
             </div>
             */
           )}
-          <div>{whenTime}</div>
+          <div>
+            <span>{renderRead()}</span>
+            <span>{whenTime}</span>
+          </div>
         </div>
       );
     } else {
