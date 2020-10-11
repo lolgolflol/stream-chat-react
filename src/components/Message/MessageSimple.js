@@ -373,7 +373,7 @@ class MessageSimple extends PureComponent {
       return (
         <div
           className="str-chat__message-simple__actions"
-          style={{ justifyContent: 'flex-end', alignItem: 'flex-end' }}
+          style={{ justifyContent: 'flex-end', alignItems: 'flex-end' }}
         >
           {this.renderMessageActions()}
           {/* !threadList && channelConfig && channelConfig.replies && (
@@ -410,7 +410,7 @@ class MessageSimple extends PureComponent {
             </div>
             */
           )}
-          <div style={{ marginRight: '10px' }}>
+          <div style={{ marginRight: '10px', fontSize: '12px', color: 'gray' }}>
             <span style={{ marginRight: '5px' }}>{this.renderRead()}</span>
             {groupStyles.includes('bottom') ? (
               <span>{whenTime}</span>
@@ -436,7 +436,7 @@ class MessageSimple extends PureComponent {
               </svg>
             </div>
             )*/}
-          {!threadList && channelConfig && channelConfig.replies && (
+          {/* !threadList && channelConfig && channelConfig.replies && (
             <div
               onClick={handleOpenThread}
               className="str-chat__message-simple__actions__action str-chat__message-simple__actions__action--thread"
@@ -448,7 +448,7 @@ class MessageSimple extends PureComponent {
                 />
               </svg>
             </div>
-          )}
+            ) */}
           {this.renderMessageActions()}
         </div>
       );
