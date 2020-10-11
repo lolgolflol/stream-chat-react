@@ -355,6 +355,7 @@ class MessageSimple extends PureComponent {
       threadList,
       handleOpenThread,
       tDateTimeParser,
+      groupStyles,
     } = this.props;
     if (
       message.type === 'error' ||
@@ -370,7 +371,10 @@ class MessageSimple extends PureComponent {
     const whenTime = tDateTimeParser(message.created_at).format('LT');
     if (this.isMine()) {
       return (
-        <div className="str-chat__message-simple__actions">
+        <div
+          className="str-chat__message-simple__actions"
+          style={{ justifyContent: 'flex-end', alignItem: 'flex-end' }}
+        >
           {this.renderMessageActions()}
           {/* !threadList && channelConfig && channelConfig.replies && (
             <div
@@ -406,12 +410,13 @@ class MessageSimple extends PureComponent {
             </div>
             */
           )}
-          <div
-            style={{ marginRight: '10px' }}
-            className="str-chat__message-simple-timestamp"
-          >
+          <div style={{ marginRight: '10px' }}>
             <span style={{ marginRight: '5px' }}>{this.renderRead()}</span>
-            <span>{whenTime}</span>
+            {groupStyles.includes('bottom') ? (
+              <span>{whenTime}</span>
+            ) : (
+              <span></span>
+            )}
           </div>
         </div>
       );
