@@ -404,7 +404,7 @@ class MessageSimple extends PureComponent {
             */
           )}
           <div>
-            <span>{renderRead()}</span>
+            <span>{this.renderRead()}</span>
             <span>{whenTime}</span>
           </div>
         </div>
