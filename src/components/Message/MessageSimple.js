@@ -351,6 +351,7 @@ class MessageSimple extends PureComponent {
       channelConfig,
       threadList,
       handleOpenThread,
+      tDateTimeParser,
     } = this.props;
     if (
       message.type === 'error' ||
@@ -362,6 +363,8 @@ class MessageSimple extends PureComponent {
     ) {
       return;
     }
+
+    const whenTime = tDateTimeParser(message.created_at).format('LT');
     if (this.isMine()) {
       return (
         <div className="str-chat__message-simple__actions">
@@ -464,7 +467,6 @@ class MessageSimple extends PureComponent {
     } = this.props;
 
     const when = tDateTimeParser(message.created_at).calendar();
-    const whenTime = tDateTimeParser(message.created_at).format('LT');
 
     const messageClasses = this.isMine()
       ? 'str-chat__message str-chat__message--me str-chat__message-simple str-chat__message-simple--me'
