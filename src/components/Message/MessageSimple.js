@@ -225,6 +225,9 @@ class MessageSimple extends PureComponent {
       lastReceivedId,
       t,
     } = this.props;
+
+    const justReadByMe =
+      readBy.length === 1 && readBy[0] && readBy[0].id === client.user.id;
     if (readBy.length !== 0 && !justReadByMe) {
       const lastReadUser = readBy.filter(
         (item) => item && item.id !== client.user.id,
