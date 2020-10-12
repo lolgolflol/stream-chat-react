@@ -414,7 +414,7 @@ class MessageSimple extends PureComponent {
             groupStyles.includes('single') ? (
               <span>{whenTime}</span>
             ) : (
-              <span></span>
+              <span>{whenTime}</span>
             )}
           </div>
         </div>
@@ -430,7 +430,7 @@ class MessageSimple extends PureComponent {
             groupStyles.includes('single') ? (
               <span>{whenTime}</span>
             ) : (
-              <span></span>
+              <span>{whenTime}</span>
             )}
           </div>
 
