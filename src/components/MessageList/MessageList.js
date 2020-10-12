@@ -457,6 +457,10 @@ class MessageList extends PureComponent {
       for (const msg of messages) {
         if (msg.updated_at < readState.last_read) {
           userLastReadMsgId = msg.id;
+          readData[userLastReadMsgId] = [
+            ...readData[userLastReadMsgId],
+            readState.user,
+          ];
         }
       }
       if (userLastReadMsgId) {
