@@ -10,6 +10,7 @@ import _ from 'lodash';
 
 import chevrondown from '../../assets/str-chat__icon-chevron-down.svg';
 import flagThai from '../../assets/thailand.png';
+import ent from 'ent';
 
 /**
  * ChannelList - A preview list of channels, allowing you to select the channel you want to open
@@ -93,7 +94,8 @@ class ChannelListTeam extends PureComponent {
               <div className="str-chat__channel-list-team__header--middle">
                 <div>
                   <div className="str-chat__channel-list-team__header--title">
-                    {this.props.client.user.name || this.props.client.user.id}
+                    {ent.decode(this.props.client.user.name) ||
+                      this.props.client.user.id}
                     <span>
                       ({this.props.client.user.firstName}{' '}
                       {this.props.client.user.lastName})

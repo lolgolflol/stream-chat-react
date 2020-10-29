@@ -13,6 +13,7 @@ import ArrowForwardIosSharpIcon from '@material-ui/icons/ArrowForwardIosSharp';
  * @example ../../docs/ChannelPreviewLastMessage.md
  * @extends PureComponent
  */
+import ent from 'ent';
 
 class ChannelPreviewLastMessage extends PureComponent {
   static propTypes = {
@@ -99,7 +100,7 @@ class ChannelPreviewLastMessage extends PureComponent {
           <Avatar image={displayImage} />
           <div className="str-chat__channel-preview-info">
             <span className="str-chat__channel-preview-title">
-              {displayTitle}
+              {ent.decode(displayTitle)}
             </span>
             <span className="str-chat__channel-preview-last-message">
               {!this.props.channel.state.messages[0]
