@@ -226,7 +226,11 @@ class MessageSimple extends PureComponent {
       t,
     } = this.props;
 
-    if (readBy.length !== 0) {
+    const lastReadUser = readBy.filter(
+      (item) => item && item.id !== client.user.id,
+    );
+
+    if (lastReadUser.length !== 0) {
       return t('Read');
     }
     return '';
