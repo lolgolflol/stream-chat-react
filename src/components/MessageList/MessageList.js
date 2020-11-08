@@ -16,6 +16,7 @@ import { EventComponent } from '../EventComponent';
 import { DateSeparator } from '../DateSeparator';
 import { KEY_CODES } from '../AutoCompleteTextarea';
 
+import ent from 'ent';
 /* eslint sonarjs/no-duplicate-string: 0 */
 
 const Center = ({ children }) => (
@@ -670,7 +671,7 @@ class MessageList extends PureComponent {
     if (client.userID === created_by.id) {
       return t('Welcome to the chatroom');
     } else {
-      return `${created_by.name} ${t('Open chat with you')}`;
+      return `${ent.decode(created_by.name)} ${t('Open chat with you')}`;
     }
   };
 
