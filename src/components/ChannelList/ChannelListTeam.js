@@ -97,8 +97,12 @@ class ChannelListTeam extends PureComponent {
                     {ent.decode(this.props.client.user.name) ||
                       this.props.client.user.id}
                     <span>
-                      ({this.props.client.user.firstName}{' '}
-                      {this.props.client.user.lastName})
+                      {this.props.client.user.firstName !== 'N/A' &&
+                      this.props.client.user.lastName !== 'N/A' ? (
+                        `(${this.props.client.user.firstName} ${this.props.client.user.lastName})`
+                      ) : (
+                        <div />
+                      )}
                     </span>
                   </div>
                   <div className="str-chat__channel-list-team__header--title str-chat__channel-list-team__header--title-2 str-chat__big-letter">
