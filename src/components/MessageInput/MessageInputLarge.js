@@ -238,7 +238,6 @@ class MessageInputLarge extends PureComponent {
                   />
                 </svg>
               </span>
-              {/*
               <FileUploadButton
                 multiple={this.props.multipleUploads}
                 disabled={
@@ -262,7 +261,6 @@ class MessageInputLarge extends PureComponent {
                   </svg>
                 </span>
               </FileUploadButton>
-              */}
             </div>
             {SendButton && <SendButton sendMessage={this.props.handleSubmit} />}
           </div>
