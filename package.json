@@ -47,6 +47,7 @@
     "react-textarea-autosize": "^7.1.2",
     "seamless-immutable": "^7.1.4",
     "shallow-diff": "^0.0.5",
+    "src": "^1.1.2",
     "stream-browserify": "^2.0.2",
     "uuid": "^7.0.3",
     "visibilityjs": "^2.0.2"
