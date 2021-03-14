@@ -10,6 +10,8 @@ import {
   FileUploadButton,
 } from 'react-file-utils';
 
+import Button from '@material-ui/core/Button';
+
 import { filterEmoji } from '../../utils';
 import { withTranslationContext } from '../../context';
 import { ChatAutoComplete } from '../ChatAutoComplete';
@@ -208,9 +210,12 @@ class MessageInputLarge extends PureComponent {
             {this.renderEmojiPicker()}
             {this.props.imageOrder.length > 0 ||
             this.props.fileOrder.length > 0 ? (
-              <div>
-                <SendButton sendMessage={this.props.handleSubmit} />
-              </div>
+              <Button
+                onClick={this.props.handleSubmit}
+                className="str-chat__send-message"
+              >
+                Send
+              </Button>
             ) : (
               <div
                 className={clsx(
