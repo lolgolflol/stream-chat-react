@@ -106,12 +106,23 @@ class MessageInputLarge extends PureComponent {
           handleRetry={this.props.uploadImage}
           handleFiles={this.props.uploadNewFiles}
           multiple={this.props.multipleUploads}
+        />
+        /*
+        <ImagePreviewer
+          imageUploads={this.props.imageOrder.map(
+            (id) => this.props.imageUploads[id],
+          )}
+          handleRemove={this.props.removeImage}
+          handleRetry={this.props.uploadImage}
+          handleFiles={this.props.uploadNewFiles}
+          multiple={this.props.multipleUploads}
           disabled={
             this.props.numberOfUploads >= this.props.maxNumberOfFiles
               ? true
               : false
           }
         />
+            */
       )}
       {this.props.fileOrder.length > 0 && (
         <FilePreviewer
