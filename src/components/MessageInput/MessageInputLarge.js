@@ -208,7 +208,9 @@ class MessageInputLarge extends PureComponent {
             {this.renderEmojiPicker()}
             {this.props.imageOrder.length > 0 ||
             this.props.fileOrder.length > 0 ? (
-              <div />
+              <div>
+                <SendButton sendMessage={this.props.handleSubmit} />
+              </div>
             ) : (
               <div
                 className={clsx(
