@@ -213,6 +213,8 @@ class MessageInputLarge extends PureComponent {
               <Button
                 onClick={this.props.handleSubmit}
                 className="str-chat__send-message"
+                variant="contained"
+                color="primary"
               >
                 Send
               </Button>
