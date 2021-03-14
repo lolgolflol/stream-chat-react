@@ -206,50 +206,55 @@ class MessageInputLarge extends PureComponent {
           <div className="str-chat__input">
             {this.renderUploads()}
             {this.renderEmojiPicker()}
-            <div
-              className={clsx(
-                'str-chat__input--textarea-wrapper',
-                messageOverFlow,
-              )}
-            >
-              <ChatAutoComplete
-                users={this.props.getUsers()}
-                commands={this.props.getCommands()}
-                innerRef={this.props.textareaRef}
-                handleSubmit={(e) => this.props.handleSubmit(e)}
-                onChange={this.props.handleChange}
-                onSelectItem={this.props.onSelectItem}
-                value={this.props.text}
-                rows={1}
-                maxRows={this.props.maxRows}
-                placeholder={t('Type your message')}
-                onPaste={this.props.onPaste}
-                grow={this.props.grow}
-                disabled={disabled}
-                additionalTextareaProps={this.props.additionalTextareaProps}
-              />
+            {this.props.imageOrder.length > 0 ? (
+              <div />
+            ) : (
+              <div
+                className={clsx(
+                  'str-chat__input--textarea-wrapper',
+                  messageOverFlow,
+                )}
+              >
+                <ChatAutoComplete
+                  users={this.props.getUsers()}
+                  commands={this.props.getCommands()}
+                  innerRef={this.props.textareaRef}
+                  handleSubmit={(e) => this.props.handleSubmit(e)}
+                  onChange={this.props.handleChange}
+                  onSelectItem={this.props.onSelectItem}
+                  value={this.props.text}
+                  rows={1}
+                  maxRows={this.props.maxRows}
+                  placeholder={t('Type your message')}
+                  onPaste={this.props.onPaste}
+                  grow={this.props.grow}
+                  disabled={disabled}
+                  additionalTextareaProps={this.props.additionalTextareaProps}
+                />
 
-              <span
-                className="str-chat__input-emojiselect"
-                onClick={this.props.openEmojiPicker}
-              >
-                <InsertEmoticonIcon style={{ fill: 'black' }} />
-              </span>
-              <FileUploadButton
-                multiple={this.props.multipleUploads}
-                disabled={
-                  this.props.numberOfUploads >= this.props.maxNumberOfFiles
-                    ? false
-                    : false
-                }
-                accepts={this.props.acceptedFiles}
-                handleFiles={this.props.uploadNewFiles}
-              >
-                <span className="str-chat__input-fileupload">
-                  <AddCircleOutlineIcon style={{ fill: 'black' }} />
+                <span
+                  className="str-chat__input-emojiselect"
+                  onClick={this.props.openEmojiPicker}
+                >
+                  <InsertEmoticonIcon style={{ fill: 'black' }} />
                 </span>
-              </FileUploadButton>
-            </div>
+                <FileUploadButton
+                  multiple={this.props.multipleUploads}
+                  disabled={
+                    this.props.numberOfUploads >= this.props.maxNumberOfFiles
+                      ? false
+                      : false
+                  }
+                  accepts={this.props.acceptedFiles}
+                  handleFiles={this.props.uploadNewFiles}
+                >
+                  <span className="str-chat__input-fileupload">
+                    <AddCircleOutlineIcon style={{ fill: 'black' }} />
+                  </span>
+                </FileUploadButton>
+              </div>
+            )}
+
             {SendButton && <SendButton sendMessage={this.props.handleSubmit} />}
           </div>
           <div>
