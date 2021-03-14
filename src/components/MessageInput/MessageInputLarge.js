@@ -233,7 +233,7 @@ class MessageInputLarge extends PureComponent {
                 className="str-chat__input-emojiselect"
                 onClick={this.props.openEmojiPicker}
               >
-                <InsertEmoticonIcon />
+                <InsertEmoticonIcon style={{ fill: 'black' }} />
               </span>
               <FileUploadButton
                 multiple={this.props.multipleUploads}
@@ -246,7 +246,7 @@ class MessageInputLarge extends PureComponent {
                 handleFiles={this.props.uploadNewFiles}
               >
                 <span className="str-chat__input-fileupload">
-                  <AddCircleOutlineIcon />
+                  <AddCircleOutlineIcon style={{ fill: 'black' }} />
                 </span>
               </FileUploadButton>
             </div>
