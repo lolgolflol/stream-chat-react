@@ -242,7 +242,7 @@ class MessageInputLarge extends PureComponent {
                 multiple={this.props.multipleUploads}
                 disabled={
                   this.props.numberOfUploads >= this.props.maxNumberOfFiles
-                    ? true
+                    ? false
                     : false
                 }
                 accepts={this.props.acceptedFiles}
@@ -250,8 +250,8 @@ class MessageInputLarge extends PureComponent {
               >
                 <span className="str-chat__input-fileupload">
                   <svg
-                    width="14"
-                    height="14"
+                    width="20"
+                    height="20"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
