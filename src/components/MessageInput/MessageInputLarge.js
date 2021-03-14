@@ -250,8 +250,8 @@ class MessageInputLarge extends PureComponent {
               >
                 <span className="str-chat__input-fileupload">
                   <svg
-                    width="20"
-                    height="20"
+                    width="14"
+                    height="14"
                     xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
