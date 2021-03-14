@@ -193,6 +193,7 @@ class MessageInputLarge extends PureComponent {
         messageOverFlow = 'str-chat__input-overflow';
       }
     }
+
     return (
       <div className="str-chat__input-large">
         <ImageDropzone
@@ -210,14 +211,7 @@ class MessageInputLarge extends PureComponent {
             {this.renderEmojiPicker()}
             {this.props.imageOrder.length > 0 ||
             this.props.fileOrder.length > 0 ? (
-              <Button
-                onClick={this.props.handleSubmit}
-                className="str-chat__send-message"
-                variant="contained"
-                color="primary"
-              >
-                Send
-              </Button>
+              <div />
             ) : (
               <div
                 className={clsx(
