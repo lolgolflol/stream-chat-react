@@ -206,7 +206,8 @@ class MessageInputLarge extends PureComponent {
           <div className="str-chat__input">
             {this.renderUploads()}
             {this.renderEmojiPicker()}
-            {this.props.imageOrder.length > 0 ? (
+            {this.props.imageOrder.length > 0 ||
+            this.props.fileOrder.length > 0 ? (
               <div />
             ) : (
               <div
