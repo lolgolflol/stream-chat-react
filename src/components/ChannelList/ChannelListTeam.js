@@ -109,14 +109,14 @@ class ChannelListTeam extends PureComponent {
                     {this.props.client.user.userWord}
                     <img src={imageFlag} />
                     <div>
+                      <span>{_.get(superPhoneNumber, '[2]', 0)}</span>
                       <span>{_.get(superPhoneNumber, '[3]', 0)}</span>
                       <span>{_.get(superPhoneNumber, '[4]', 0)}</span>
-                      <span>{_.get(superPhoneNumber, '[5]', 0)}</span>
                       <span className="str-chat__span-dash">-</span>
+                      <span>{_.get(superPhoneNumber, '[5]', 0)}</span>
                       <span>{_.get(superPhoneNumber, '[6]', 0)}</span>
                       <span>{_.get(superPhoneNumber, '[7]', 0)}</span>
                       <span>{_.get(superPhoneNumber, '[8]', 0)}</span>
-                      <span>{_.get(superPhoneNumber, '[9]', 0)}</span>
                     </div>
                   </div>
                 </div>
